@@ -1,0 +1,57 @@
+{
+  "id": "chrome_background",
+  "title": "svg 크롬 배경화면",
+  "shortDescription": "svg 이미지에 입체감을 줘서 배경화면 만들기",
+  "fullDescription": "유튜브에서 svg 이미지의 각 선을 분리해서 높이에 차이를 줘 3D 요소로 만드는 블렌더 강의를 보고 따라 해 보다가 은근 보기 좋길래 렌더를 하나 뽑게 되었습니다.\r\n렌더도 맘에 들어서 한동안 크롬 배경화면으로 사용한 기억이 나네요.",
+  "status": "완성",
+  "progressPercentage": "0",
+  "startDate": "",
+  "endDate": "",
+  "totalHours": "",
+  "tags": [
+    "3D",
+    "간단한 작품",
+    "wallpaper",
+    "이미지",
+    "연습작"
+  ],
+  "qualityRating": "3",
+  "satisfactionRating": "4",
+  "difficultyRating": "1.5",
+  "feedback": "",
+  "githubLink": "",
+  "websiteLink": "",
+  "createdAt": 1747661290231,
+  "updatedAt": 1747661314362,
+  "workPeriod": {
+    "startDate": null,
+    "endDate": null,
+    "totalHours": null
+  },
+  "ratings": {
+    "quality": 3,
+    "satisfaction": 4,
+    "difficulty": 1.5
+  },
+  "links": [],
+  "media": {
+    "thumbnail": "/assets/chrome_background/render.png",
+    "items": [
+      {
+        "type": "image",
+        "url": "/assets/chrome_background/render.png",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "url": "/assets/chrome_background/render_removeBG.png",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "url": "/assets/chrome_background/dev001.png",
+        "caption": ""
+      }
+    ]
+  }
+}

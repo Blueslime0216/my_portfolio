@@ -1,0 +1,219 @@
+.search-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  background-color: var(--color-bg-secondary);
+}
+
+.page-header {
+  text-align: center;
+  margin: 2rem 0 3rem;
+  background-color: var(--color-bg-secondary);
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-primary);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+/* 검색 폼 */
+.search-form-container {
+  margin-bottom: 3rem;
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px var(--color-card-shadow);
+  padding: 1.5rem;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-input-group {
+  display: flex;
+  width: 100%;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-right: none;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  font-size: 1rem;
+  background-color: var(--color-input-bg);
+  color: var(--color-input-text);
+  transition: border-color var(--transition-speed) ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  font-weight: 500;
+  border: none;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.search-button:hover {
+  background-color: var(--color-button-hover);
+}
+
+.search-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.filter-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-input-bg);
+  color: var(--color-input-text);
+  font-size: 0.875rem;
+  min-width: 150px;
+  transition: border-color var(--transition-speed) ease;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.clear-filters-button {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-button-secondary-bg);
+  color: var(--color-button-secondary-text);
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.clear-filters-button:hover {
+  background-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+/* 활성 필터 표시 */
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-border);
+  margin-top: 1.5rem;
+}
+
+.active-filters > span:first-child {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.filter-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+}
+
+/* 검색 결과 */
+.search-results {
+  margin-bottom: 3rem;
+  background-color: var(--color-bg-secondary);
+}
+
+.search-results h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-primary);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* 로딩 및 상태 메시지 */
+.loading-container, .error-message {
+  background-color: var(--color-bg-secondary);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .search-filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .clear-filters-button {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  
+  .filter-group {
+    width: 100%;
+  }
+  
+  .filter-select {
+    flex: 1;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input-group {
+    flex-direction: column;
+  }
+  
+  .search-input {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-right: 1px solid var(--color-border);
+    border-bottom: none;
+  }
+  
+  .search-button {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+  }
+} 

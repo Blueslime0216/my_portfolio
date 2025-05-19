@@ -1,0 +1,32 @@
+[
+  {
+    "id": "bs_logo_intro",
+    "title": "푸슬 로고",
+    "shortDescription": "푸슬 로고 등장 애니메이션",
+    "status": "완성",
+    "thumbnail": "/assets/bs_logo_intro/Big.png",
+    "tags": [
+      "3D",
+      "애니메이션",
+      "간단한 작품"
+    ],
+    "createdAt": 1747660799032,
+    "updatedAt": 1747660799032
+  },
+  {
+    "id": "chrome_background",
+    "title": "svg 크롬 배경화면",
+    "shortDescription": "svg 이미지에 입체감을 줘서 배경화면 만들기",
+    "status": "완성",
+    "thumbnail": "/assets/chrome_background/render.png",
+    "tags": [
+      "3D",
+      "간단한 작품",
+      "wallpaper",
+      "이미지",
+      "연습작"
+    ],
+    "createdAt": 1747661290231,
+    "updatedAt": 1747661314362
+  }
+]

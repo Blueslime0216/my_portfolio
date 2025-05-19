@@ -1,0 +1,50 @@
+{
+  "id": "bs_logo_intro",
+  "title": "푸슬 로고",
+  "shortDescription": "푸슬 로고 등장 애니메이션",
+  "fullDescription": "학교에서 뭔지 자세하게 기억은 안 나지만, 수행평가인가 등으로 만들 기회가 생겨서 1교시 만에 제작한 간단한 애니메이션\r\n페인트넷으로 빈 캔버스 하나 만들고, 생각하는 과정 다 적으며 작업. 역시 이 방법이 나중에 볼 때 재미있기도 하고, 작업 중에 메타인지?도 잘 되는 듯",
+  "status": "완성",
+  "progressPercentage": "100",
+  "startDate": "2024-06-19",
+  "endDate": "2024-06-19",
+  "totalHours": "1",
+  "tags": [
+    "3D",
+    "애니메이션",
+    "간단한 작품"
+  ],
+  "qualityRating": "2",
+  "satisfactionRating": "4",
+  "difficultyRating": "0.5",
+  "feedback": "그냥 수업 중에 간단하게 만든 건데, 가성비 좋게 잘 나온 듯",
+  "githubLink": "",
+  "websiteLink": "",
+  "createdAt": 1747660799032,
+  "updatedAt": 1747660799032,
+  "workPeriod": {
+    "startDate": 1718755200000,
+    "endDate": 1718755200000,
+    "totalHours": 1
+  },
+  "ratings": {
+    "quality": 2,
+    "satisfaction": 4,
+    "difficulty": 0.5
+  },
+  "links": [],
+  "media": {
+    "thumbnail": "/assets/bs_logo_intro/Big.png",
+    "items": [
+      {
+        "type": "image",
+        "url": "/assets/bs_logo_intro/BS Logo.gif",
+        "caption": ""
+      },
+      {
+        "type": "image",
+        "url": "/assets/bs_logo_intro/21107ë°ìì¸ - ìì¤í¤ì¤.png",
+        "caption": ""
+      }
+    ]
+  }
+}
