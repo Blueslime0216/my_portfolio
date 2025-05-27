@@ -62,7 +62,21 @@ export default function WorkDetail() {
     if (work.progressPercentage >= 20) return '#f7aa4f';
     return '#f25767';
   };
-  
+
+  // 상세 JSON과 호환성을 위한 보조 변환 ----------------------
+  // description 필드가 없으면 fullDescription 사용
+  const descriptionText = work.description || work.fullDescription;
+
+  // progressPercentage 문자열 → 숫자 변환
+  const progress = Number(work.progressPercentage);
+
+  // ratings 객체가 없으면 개별 rating 필드에서 구성
+  const ratingsData = work.ratings || {
+    quality: Number(work.qualityRating) || 0,
+    satisfaction: Number(work.satisfactionRating) || 0,
+    difficulty: Number(work.difficultyRating) || 0,
+  };
+
   return (
     <Layout>
       <div className={styles['work-detail-container']}>
@@ -123,7 +137,7 @@ export default function WorkDetail() {
                 >
                   개요
                 </button>
-                {work.description && (
+                {descriptionText && (
                   <button 
                     className={`${styles['tab-btn']} ${activeTab === 'description' ? styles['active'] : ''}`}
                     onClick={() => setActiveTab('description')}
@@ -152,13 +166,13 @@ export default function WorkDetail() {
                       <div className={styles['progress-section']}>
                         <div className={styles['progress-header']}>
                           <span>진행률</span>
-                          <span>{work.progressPercentage}%</span>
+                          <span>{progress}%</span>
                         </div>
                         <div className={styles['progress-bar']}>
                           <div 
                             className={styles['progress-fill']} 
                             style={{ 
-                              width: `${work.progressPercentage}%`,
+                              width: `${progress}%`,
                               backgroundColor: getProgressColor()
                             }}
                           ></div>
@@ -183,19 +197,19 @@ export default function WorkDetail() {
                       </div>
                     </div>
                     
-                    {work.ratings && (
+                    {ratingsData && (
                       <div className={styles['info-card']}>
                         <h3>평가</h3>
                         <div className={styles['ratings-container']}>
                           <div className={styles['rating-item']}>
                             <div className={styles['rating-header']}>
                               <span className={styles['rating-label']}>품질</span>
-                              <span className={styles['rating-value']}>{work.ratings.quality}</span>
+                              <span className={styles['rating-value']}>{ratingsData.quality}</span>
                             </div>
                             <div className={styles['rating-bar-container']}>
                               <div 
                                 className={styles['rating-bar']} 
-                                style={{width: `${(work.ratings.quality / 5) * 100}%`}}
+                                style={{width: `${(ratingsData.quality / 5) * 100}%`}}
                               ></div>
                             </div>
                           </div>
@@ -203,12 +217,12 @@ export default function WorkDetail() {
                           <div className={styles['rating-item']}>
                             <div className={styles['rating-header']}>
                               <span className={styles['rating-label']}>만족도</span>
-                              <span className={styles['rating-value']}>{work.ratings.satisfaction}</span>
+                              <span className={styles['rating-value']}>{ratingsData.satisfaction}</span>
                             </div>
                             <div className={styles['rating-bar-container']}>
                               <div 
                                 className={styles['rating-bar']} 
-                                style={{width: `${(work.ratings.satisfaction / 5) * 100}%`}}
+                                style={{width: `${(ratingsData.satisfaction / 5) * 100}%`}}
                               ></div>
                             </div>
                           </div>
@@ -216,12 +230,12 @@ export default function WorkDetail() {
                           <div className={styles['rating-item']}>
                             <div className={styles['rating-header']}>
                               <span className={styles['rating-label']}>난이도</span>
-                              <span className={styles['rating-value']}>{work.ratings.difficulty}</span>
+                              <span className={styles['rating-value']}>{ratingsData.difficulty}</span>
                             </div>
                             <div className={styles['rating-bar-container']}>
                               <div 
                                 className={styles['rating-bar']} 
-                                style={{width: `${(work.ratings.difficulty / 5) * 100}%`}}
+                                style={{width: `${(ratingsData.difficulty / 5) * 100}%`}}
                               ></div>
                             </div>
                           </div>
@@ -252,11 +266,11 @@ export default function WorkDetail() {
                 )}
                 
                 {/* 상세 설명 탭 */}
-                {activeTab === 'description' && work.description && (
+                {activeTab === 'description' && descriptionText && (
                   <div className={styles['description-content']}>
                     <div className={styles['info-card']}>
                       <div className={styles['work-description-content']}>
-                        {work.description.split('\n').map((paragraph, index) => (
+                        {descriptionText.split('\n').map((paragraph, index) => (
                           <p key={index}>{paragraph}</p>
                         ))}
                       </div>

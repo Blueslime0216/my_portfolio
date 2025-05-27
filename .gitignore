@@ -19,3 +19,6 @@ yarn-error.log*
 # 운영체제별 파일
 .DS_Store
 Thumbs.db 
+
+# 프롬프트
+프롬프트/

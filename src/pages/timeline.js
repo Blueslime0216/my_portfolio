@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '../components/layout/Layout';
-import { useWorks } from '../hooks/useWorks';
+import { useWorks } from '../context/WorksContext';
 import styles from '../styles/Timeline.module.css';
 
 export default function Timeline() {
