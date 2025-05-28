@@ -6,6 +6,8 @@ import Link from 'next/link';
 import styles from '../../styles/WorkDetail.module.css';
 import WorkCard from '../../components/gallery/WorkCard';
 import { useTheme } from '../../context/ThemeContext';
+import DescriptionTab from '../../components/work-detail/DescriptionTab';
+import ShareButton from '../../components/work-detail/ShareButton';
 
 export default function WorkDetail() {
   const router = useRouter();
@@ -124,6 +126,10 @@ export default function WorkDetail() {
                 ))}
               </div>
             )}
+            {/* 공유 버튼 추가 */}
+            <div className={styles['share-button-container']}>
+              <ShareButton />
+            </div>
           </div>
           
           {/* 하단 내용 영역 */}
@@ -267,15 +273,7 @@ export default function WorkDetail() {
                 
                 {/* 상세 설명 탭 */}
                 {activeTab === 'description' && descriptionText && (
-                  <div className={styles['description-content']}>
-                    <div className={styles['info-card']}>
-                      <div className={styles['work-description-content']}>
-                        {descriptionText.split('\n').map((paragraph, index) => (
-                          <p key={index}>{paragraph}</p>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+                  <DescriptionTab content={descriptionText} />
                 )}
                 
                 {/* 갤러리 탭 */}

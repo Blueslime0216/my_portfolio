@@ -1,0 +1,51 @@
+/* DescriptionTab specific styles will go here */
+.descriptionContainer {
+  padding: 1rem 0;
+  line-height: 1.7;
+}
+
+/* Markdown 기본 스타일 (다음 단계에서 react-markdown과 함께 개선) */
+.descriptionContainer h1 {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #eee;
+}
+
+.descriptionContainer h2 {
+  font-size: 1.5rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.descriptionContainer p {
+  margin-bottom: 1rem;
+}
+
+.descriptionContainer ul,
+.descriptionContainer ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.descriptionContainer blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid #ccc;
+  color: #555;
+}
+
+.descriptionContainer code {
+  background-color: #f0f0f0;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.descriptionContainer pre code {
+  display: block;
+  padding: 1rem;
+  overflow-x: auto;
+}

@@ -10,11 +10,6 @@
       "애니메이션",
       "간단한 작품"
     ],
-    "workPeriod": {
-      "startDate": 1747560799032,
-      "endDate": 1747660799032,
-      "totalHours": 24
-    },
     "createdAt": 1747660799032,
     "updatedAt": 1747660799032
   },
@@ -31,11 +26,6 @@
       "이미지",
       "연습작"
     ],
-    "workPeriod": {
-      "startDate": 1747561290231,
-      "endDate": 1747661290231,
-      "totalHours": 36
-    },
     "createdAt": 1747661290231,
     "updatedAt": 1747661314362
   },

@@ -1,0 +1,36 @@
+/* ShareButton specific styles will go here */
+.shareButton {
+  display: inline-flex; /* 아이콘과 텍스트 정렬을 위해 */
+  align-items: center;
+  background-color: var(--color-primary, #007bff);
+  color: var(--color-button-text, white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius-medium, 6px);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+  margin-top: 1rem; /* 다른 요소와의 간격 추가 */
+}
+
+.shareButton:hover {
+  background-color: var(--color-primary-dark, #0056b3);
+  transform: translateY(-1px);
+}
+
+.shareButton:active {
+  transform: translateY(0);
+}
+
+.shareButton:disabled {
+  background-color: var(--color-disabled, #cccccc);
+  color: var(--color-disabled-text, #666666);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 아이콘을 추가할 경우를 위한 예시 (SVG 또는 폰트 아이콘 사용) */
+/* .shareButton svg {
+  margin-right: 0.5rem;
+} */
