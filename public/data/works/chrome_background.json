@@ -1,4 +1,5 @@
 {
+  "achievementId": null,
   "id": "chrome_background",
   "title": "svg 크롬 배경화면",
   "shortDescription": "svg 이미지에 입체감을 줘서 배경화면 만들기",

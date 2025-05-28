@@ -3,16 +3,27 @@ import Cookies from 'js-cookie';
 
 const ThemeContext = createContext({
   theme: 'pastel',
-  setTheme: () => {},
-});
+  setTheme: () => {}
+}); // setTheme는 Provider에서 덮어쓰기
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(null);
 
-  // 쿠키에서 테마 불러오기 (최초 1회)
+  // 초기 테마 결정: 쿠키 → 시스템 선호 → 기본 pastel
   useEffect(() => {
     const savedTheme = Cookies.get('whaaay-theme');
-    setTheme(savedTheme || 'pastel');
+    if (savedTheme) {
+      setTheme(savedTheme);
+      return;
+    }
+
+    // 시스템 라이트 / 다크 감지
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDark ? 'dark' : 'light');
+    } else {
+      setTheme('pastel');
+    }
   }, []);
 
   // 테마 변경시 쿠키에 저장 및 HTML/body에 테마 클래스 적용

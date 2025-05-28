@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState, useContext, useEffect, useMemo } from 'react';
 
 const WorksContext = createContext({
   works: [],
@@ -43,7 +43,12 @@ export const WorksProvider = ({ children }) => {
         }
         
         const data = await res.json();
-        setWorks(data);
+        // 최신 작품이 먼저 오도록 정렬
+        const sorted = data.sort((a, b) => {
+          // updatedAt이 문자열일 경우를 대비해 Number 변환
+          return Number(b.updatedAt) - Number(a.updatedAt);
+        });
+        setWorks(sorted);
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -91,8 +96,8 @@ export const WorksProvider = ({ children }) => {
     });
   };
   
-  // 필터링된 작품 목록
-  const filteredWorks = works.filter(work => {
+  // 필터링된 작품 목록 – useMemo로 메모이제이션하여 렌더링 성능 향상
+  const filteredWorks = useMemo(() => works.filter(work => {
     // 태그 필터
     if (filter.tag && (!work.tags || !work.tags.includes(filter.tag))) {
       return false;
@@ -116,7 +121,7 @@ export const WorksProvider = ({ children }) => {
     }
     
     return true;
-  });
+  }), [works, filter]);
   
   return (
     <WorksContext.Provider 
