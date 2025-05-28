@@ -17,8 +17,8 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
         >
-          <h1>Whaaay? 갤러리</h1>
-          <p className={styles.subtitle}>우주 속에서 빛나는 작업물을 만나보세요</p>
+          <h1>Whaaay?</h1>
+          <p className={styles.subtitle}>푸슬이 작업한 모든 작품들을 담을 갤러리입니다.</p>
         </motion.div>
         
         {error && (

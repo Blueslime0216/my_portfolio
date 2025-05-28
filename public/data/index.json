@@ -28,5 +28,15 @@
     ],
     "createdAt": 1747661290231,
     "updatedAt": 1747661314362
+  },
+  {
+    "id": "dummy",
+    "title": "아직 작업 중입니다",
+    "shortDescription": "작품은 더 추가될 예정입니다!",
+    "status": "진행 중",
+    "thumbnail": "/assets/dummy/336ef027d236ecdf.webp",
+    "tags": [],
+    "createdAt": 1748398428700,
+    "updatedAt": 1748398428700
   }
 ]

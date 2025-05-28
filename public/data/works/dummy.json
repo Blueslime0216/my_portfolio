@@ -1,0 +1,41 @@
+{
+  "id": "dummy",
+  "title": "아직 작업 중입니다",
+  "shortDescription": "작품은 더 추가될 예정입니다!",
+  "fullDescription": "시간이 없는 관계로 일단 2개 정도만 예시로 추가해보았습니다.\r\n곧 다른 작품들도 추가될 예정입니다.",
+  "status": "진행 중",
+  "progressPercentage": "0",
+  "startDate": "",
+  "endDate": "",
+  "totalHours": "",
+  "tags": [],
+  "qualityRating": "0",
+  "satisfactionRating": "0",
+  "difficultyRating": "0",
+  "feedback": "",
+  "githubLink": "",
+  "websiteLink": "",
+  "createdAt": 1748398428700,
+  "updatedAt": 1748398428700,
+  "workPeriod": {
+    "startDate": null,
+    "endDate": null,
+    "totalHours": null
+  },
+  "ratings": {
+    "quality": 0,
+    "satisfaction": 0,
+    "difficulty": 0
+  },
+  "links": [],
+  "media": {
+    "thumbnail": "/assets/dummy/336ef027d236ecdf.webp",
+    "items": [
+      {
+        "type": "image",
+        "url": "/assets/dummy/336ef027d236ecdf.webp",
+        "caption": ""
+      }
+    ]
+  }
+}
